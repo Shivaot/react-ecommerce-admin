@@ -12,7 +12,7 @@ const AddMetadata = ({ token }) => {
         e.preventDefault();
         axios.post('metadata/add/?fieldName=' + name,{},{ headers: { "Authorization": "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setSuccess(true);
                 setError(null);
             })

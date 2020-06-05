@@ -18,7 +18,7 @@ const AddCategoryPage = ({ token }) => {
         setSubError(null);
         axios.get('category/all',{ headers: { Authorization : "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setCategories(response.data);
             })
             .catch(error => {
@@ -34,12 +34,12 @@ const AddCategoryPage = ({ token }) => {
         e.preventDefault();
         axios.post('category/add?name=' + rootName,{},{ headers: { Authorization : "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setRootSuccess(true);
                 setRootError(null);
             })
             .catch(error => {
-                console.log(error.response.data);
+                // console.log(error.response.data);
                 setRootError(error.response.data.message);
                 setRootSuccess(false);
             })
@@ -58,7 +58,7 @@ const AddCategoryPage = ({ token }) => {
         e.preventDefault();
         axios.post('/category/add?name=' + subName + '&parentId=' + parentId , {}, { headers: { Authorization : "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setSubSuccess(true);
                 setSubError(null);
             }) 

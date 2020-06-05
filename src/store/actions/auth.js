@@ -70,8 +70,8 @@ export const auth = (email, password) => {
 				dispatch(checkAuthTimeout(response.data.expires_in));
 			}).catch((error) => {
 				if (error.response) {
-					console.log(error.response.data.error);
-				console.log(error.response.data.error_description);
+					// console.log(error.response.data.error);
+				// console.log(error.response.data.error_description);
 				let errorMessage = "";
 				if (!error.response.data.error_description) {
 					errorMessage = error.response.data.error;

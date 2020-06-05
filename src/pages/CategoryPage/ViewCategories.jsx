@@ -18,7 +18,7 @@ const ViewCategories = ({ token , history }) => {
         setLoading(true);
         axios.get('category/all',{ headers: { Authorization : "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setCategories(response.data);
                 setLoading(false);
             })
@@ -32,15 +32,20 @@ const ViewCategories = ({ token , history }) => {
         setMetadata(arr);   
         setShowModal(true);
     }
+
     const modalClosedHandler = () => setShowModal(false);
+
     const updateModalClosedHandler = () => setUpdateModal(false);
+
     const updateClick = (id) => {
         setUpdateId(id);
         setUpdateModal(true);
     }
+    
     if (loading) {
         return <Spinner />;
     }
+    
     return (
     <>
             {showModal ? <Modal show={showModal} modalClosed={modalClosedHandler}>

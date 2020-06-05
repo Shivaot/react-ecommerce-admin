@@ -10,7 +10,7 @@ const UpdateCategory = ({ id, token }) => {
         e.preventDefault();
         axios.put('category/update/?id=' + id + '&name=' + name,{},{ headers: { "Authorization": "Bearer" + token}})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setSuccess(true);
                 setError(null);
             })

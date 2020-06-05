@@ -20,15 +20,15 @@ const CustomerPage = ({ token }) => {
         }
         axios.get('/customers',{ headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setCustomers(response.data);
                 setLoading(false);
             })
             .catch(error => {
                 setLoading(false);
-                if (error.response) {
-                    console.log(error.response.data);
-                }
+                // if (error.response) {
+                //     console.log(error.response.data);
+                // }
             })
     },[token,activated,deactivated])
     const activateClick = (id) => {
@@ -37,11 +37,11 @@ const CustomerPage = ({ token }) => {
         }
         axios.patch('admin/customer/activate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setActivated(true);
             })
             .catch(error => {
-                console.log(error.response.data);
+                // console.log(error.response.data);
             })
     }
     const deActivateClick = (id) => {
@@ -50,7 +50,7 @@ const CustomerPage = ({ token }) => {
         }
         axios.patch('admin/customer/deactivate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setDeactivated(true);
             })
             .catch(error => {

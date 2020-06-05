@@ -23,6 +23,7 @@ function App(props) {
   useEffect(() => {  
     onAutoSignIn();
   }, [onAutoSignIn]);
+  
   let routes = (
     <Switch>
       <Route exact path="/signin" component={AuthPage} />

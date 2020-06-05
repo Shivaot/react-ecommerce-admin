@@ -11,7 +11,7 @@ const ViewMetadata = ({ token }) => {
         setLoading(true);
         axios.get('metadata/view',{ headers: { "Authorization" : "Bearer" + token }})
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setMetadata(response.data);
                 setLoading(false);  
             })

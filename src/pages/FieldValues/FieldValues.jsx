@@ -22,7 +22,7 @@ const FieldValues = ({ token }) => {
         };
         axios.get("category/all",{ headers: headers})
             .then(response => {
-                console.log(response.data)
+                // console.log(response.data)
                 setCategories(response.data)
             })
             .catch(error=> {                
@@ -38,7 +38,7 @@ const FieldValues = ({ token }) => {
         };
         axios.get("metadata/view",{ headers: headers})
             .then(response => {
-                console.log(response.data)
+                // console.log(response.data)
                 setMetadata(response.data)
             })
             .catch(error=> {                
@@ -69,7 +69,7 @@ const FieldValues = ({ token }) => {
         }
         axios.post('categoryMetadata/add',data,{ headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setSuccess(true);
                 setError(null);
             })
@@ -94,7 +94,7 @@ const FieldValues = ({ token }) => {
         }
         axios.put('categoryMetadata/update',data,{ headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setUpdateSuccess(true);
                 setUpdateError(null);
             })

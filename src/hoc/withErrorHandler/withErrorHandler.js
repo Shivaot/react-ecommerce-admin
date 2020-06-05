@@ -14,12 +14,10 @@ const withErrorHandler = (WrappedComponent, axios) => {
 		const responseInterceptors = axios.interceptors.response.use(
 			(response) => response,
 			(err) => {
-				if (err.response) {
-					console.log(err.response);
-					
-				}
-				console.log(err);
-				
+				// if (err.response) {
+				// 	console.log(err.response);
+				// }
+				// console.log(err);
 				setError(err.message);
 			}
 		);
@@ -38,13 +36,11 @@ const withErrorHandler = (WrappedComponent, axios) => {
 		return (
 			<>
 				<Modal show={error} modalClosed={errorConfirmedHandler}>
-					{error ? error + " sorry for error": null}
+					{error ? error + " sorry for error" : null}
 				</Modal>
 				<WrappedComponent {...props} />
 			</>
 		);
-
-	
 	};
 };
 

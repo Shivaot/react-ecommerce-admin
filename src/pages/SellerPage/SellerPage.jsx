@@ -19,7 +19,7 @@ const SellerPage = ({ token }) => {
         }
         axios.get('/sellers',{ headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setSellers(response.data);
                 setLoading(false);
             })
@@ -36,7 +36,7 @@ const SellerPage = ({ token }) => {
         }
         axios.patch('admin/seller/activate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setActivated(true);
             })
             .catch(error => {
@@ -49,7 +49,7 @@ const SellerPage = ({ token }) => {
         }
         axios.patch('admin/seller/deactivate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setDeactivated(true);
             })
             .catch(error => {

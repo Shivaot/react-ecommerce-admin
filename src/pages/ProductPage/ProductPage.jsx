@@ -19,7 +19,7 @@ const ProductPage = ({ token }) => {
         }
         axios.get('product/admin/all',{ headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setProducts(response.data.products)
                 setLoading(false);
             })
@@ -36,7 +36,7 @@ const ProductPage = ({ token }) => {
         }
         axios.put('product/admin/activate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setActivated(true);
             })
             .catch(error => {
@@ -49,7 +49,7 @@ const ProductPage = ({ token }) => {
         }
         axios.put('product/admin/deactivate/' + id, {} , { headers: headers })
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 setDeactivated(true);
             })
             .catch(error => {

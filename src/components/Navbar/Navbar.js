@@ -2,16 +2,14 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
 
-
 import classes from "./Navbar.module.css";
 
-
 const Navbar = (props) => {
-
 
 	if (!props.isAuthenticated) {
 		return null;
 	}
+	
 	return (
 		<div id="navbarDiv">
 			<header className={classes.header}>

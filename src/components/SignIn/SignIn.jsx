@@ -7,7 +7,6 @@ import CustomButton from '../UI/CustomButton/CustomButton';
 import * as actions from '../../store/actions/index';
 import './SignIn.styles.scss';
 
-
 class SignIn extends Component {
     state = {
         email: '',
@@ -36,7 +35,6 @@ class SignIn extends Component {
         );
         return (
             <div className="sign-in">
-                {/* <h2>Sign In with your email and password</h2> */}
                 {this.props.isAdmin === "negative" ? <div className="alert alert-danger" role="alert">
 						{"Not admin"}
 					</div> : null}
